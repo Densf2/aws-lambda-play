@@ -11,6 +11,14 @@ exports.handler = async(event, context, callback) => {
             executablePath: await chromium.executablePath,
             headless: chromium.headless
         });
+
+        const context = await browser.newContext();
+        const page = await context.newPage();
+        await page.goto(process.env.ENV_URL, {waitUntil: 'networkidle'});
+        await page.waitForSelector('input#search');
+        result = page.title();
+
+
     } catch (e) {
         return callback(e);
     } finally {
@@ -18,4 +26,5 @@ exports.handler = async(event, context, callback) => {
             await browser.close();
         }
     }
+    return result;
 };
