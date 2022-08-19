@@ -15,7 +15,7 @@ exports.handler = async(event, context, callback) => {
         const context = await browser.newContext();
         const page = await context.newPage();
         await page.goto(process.env.ENV_URL, {waitUntil: 'networkidle'});
-        await page.waitForSelector('input#search');
+        await page.waitForSelector('div.m-content');
         result = page.title();
 
 
