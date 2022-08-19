@@ -1,4 +1,4 @@
-simple test for check web page on playwright-core package and headless chromium browser
+simple test for check web page on playwright-core package and headless chromium browser (code tested on runtime version of node.js - 14.x)
 
 
 for deployment the code to lambda:
