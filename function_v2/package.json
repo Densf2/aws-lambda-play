@@ -1,0 +1,16 @@
+{
+  "name": "function_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sparticuz/chromium": "^106.0.2",
+    "playwright-core": "^1.27.1"
+  }
+}
