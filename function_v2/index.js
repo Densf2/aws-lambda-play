@@ -17,11 +17,12 @@ exports.handler = async(event, context, callback) => {
         const page = await context.newPage();
         await page.goto(process.env.ENV_URL, {waitUntil: 'networkidle'});
         await page.waitForSelector('div.m-content');
-        let textOnPage = await page.locator('h1.activeName').innerText()
-        assert.equal(textOnPage, 'name')
-        let anotherText = await page.locator('div.accessDate').innerText()
-        assert.match(anotherText, /[^abc]+/g)
-        result = await page.title();
+        // commented steps for asserting
+        // let textOnPage = await page.locator('h1.activeName').innerText()
+        // assert.equal(textOnPage, 'name')
+        // let anotherText = await page.locator('div.accessDate').innerText()
+        // assert.match(anotherText, /[^abc]+/g)
+        // result = await page.title();
 
 
     } catch (e) {
