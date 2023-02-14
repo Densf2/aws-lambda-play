@@ -23,7 +23,7 @@ exports.handler = async(event, context, callback) => {
         // let anotherText = await page.locator('div.accessDate').innerText()
         // assert.match(anotherText, /[^abc]+/g)
         // result = await page.title();
-
+        await context.close();
 
     } catch (e) {
         return callback(e);
