@@ -9,8 +9,7 @@ exports.handler = async(event, context, callback) => {
     try {
         browser = await playwright.launch({
             args: chromium.args,
-            executablePath: await chromium.executablePath,
-            headless: chromium.headless
+            executablePath: await chromium.executablePath
         });
 
         const context = await browser.newContext();
